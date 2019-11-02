@@ -6,7 +6,10 @@ const ul = document.querySelector('#faltas_do_luan');
 
 //---------------------------------------
 
-firebase.database().ref('/').on('value', function(event) {
+
+const user = JSON.parse(window.localStorage.getItem('firebase:authUser:AIzaSyAPK65-5FuaLXUSDlT0A4eRlqjTHRJqxcU:[DEFAULT]')).uid
+console.log(user)
+firebase.database().ref().child(`/${user}`).on('value', function(event) {
     ul.innerHTML = '';
     for(let i = 0; i < 5; i++) {
         if(i === 0) {

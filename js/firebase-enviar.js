@@ -19,6 +19,7 @@ export function envia(seg, ter, qua, qui, sex) {
     const Quantidade_quarta = contador(qua) + Number(quarta);
     const Quantidade_quinta = contador(qui) + Number(quinta);
     const Quantidade_sexta = contador(sex) + Number(sexta);
+    const user = firebase.auth().currentUser.uid;
     const faltas = {
         segunda: Quantidade_segunda,
         terca: Quantidade_terca,
@@ -26,7 +27,7 @@ export function envia(seg, ter, qua, qui, sex) {
         quinta: Quantidade_quinta,
         sexta: Quantidade_sexta
     };
-    firebase.database().ref().child('/').update(faltas);
+    firebase.database().ref().child(`/${user}`).update(faltas);
 };
 
 export function contador(vetor) {

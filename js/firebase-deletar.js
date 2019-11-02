@@ -7,7 +7,8 @@ import { contador } from './firebase-enviar.js'
 //-----------------------------------
 
 export function deleta(seg, ter, qua, qui, sex) {
-    const fb = firebase.database().ref();
+    const user = firebase.auth().currentUser.uid;
+    const fb = firebase.database().ref(`/${user}`);
     let segunda = '';
     let terca = '';
     let quarta = '';
@@ -23,17 +24,17 @@ export function deleta(seg, ter, qua, qui, sex) {
     const Quantidade_quarta = Number(quarta) - contador(qua);
     const Quantidade_quinta = Number(quinta) - contador(qui);
     const Quantidade_sexta = Number(sexta) - contador(sex);
-    Quantidade_segunda = Quantidade_segunda < 0 ? 0 : Quantidade_segunda;
-    Quantidade_terca = Quantidade_terca < 0 ? 0 : Quantidade_terca;
-    Quantidade_quarta = Quantidade_quarta < 0 ? 0 : Quantidade_quarta;
-    Quantidade_quinta = Quantidade_quinta < 0 ? 0 : Quantidade_quinta;
-    Quantidade_sexta = Quantidade_sexta < 0 ? 0 : Quantidade_sexta;
+    const Quantidade_seg = Quantidade_segunda < 0 ? 0 : Quantidade_segunda;
+    const Quantidade_ter = Quantidade_terca < 0 ? 0 : Quantidade_terca;
+    const Quantidade_quar = Quantidade_quarta < 0 ? 0 : Quantidade_quarta;
+    const Quantidade_qui = Quantidade_quinta < 0 ? 0 : Quantidade_quinta;
+    const Quantidade_sex = Quantidade_sexta < 0 ? 0 : Quantidade_sexta;
     const faltas = {
-        segunda: Quantidade_segunda,
-        terca: Quantidade_terca,
-        quarta: Quantidade_quarta,
-        quinta: Quantidade_quinta,
-        sexta: Quantidade_sexta
+        segunda: Quantidade_seg,
+        terca: Quantidade_ter,
+        quarta: Quantidade_quar,
+        quinta: Quantidade_qui,
+        sexta: Quantidade_sex
     };
-    firebase.database().ref().child('/').update(faltas);
+    firebase.database().ref().child(`/${user}`).update(faltas);
 };
