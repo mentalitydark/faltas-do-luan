@@ -19,7 +19,7 @@ cadastro.addEventListener('click', function() {
                     quinta: 0,
                     sexta: 0
                 })
-                // window.location.href="faltas.html";
+                window.location.href="faltas.html";
             })
             .catch(function(error){
                 console.log(error.code);
