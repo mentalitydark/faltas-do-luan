@@ -7,9 +7,9 @@ this.addEventListener('install', event => {
         caches.open(staticCacheName)
             .then(cache => {
                 return cache.addAll([
-                    '/js/offline.js',
-                    '/offline.html',
-                    '/css/offline.css'
+                    './js/offline.js',
+                    './offline.html',
+                    './css/offline.css'
                 ]);
             })
     );
