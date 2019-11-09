@@ -31,7 +31,7 @@
     "background_color": "#343a40",
     "description": "Site para que você possa gerenciar suas faltas!",
     "lang": "pt-BR",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "theme_color": "white",
     "display": "standalone",
     "dir": "ltr",
