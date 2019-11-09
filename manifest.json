@@ -1,0 +1,39 @@
+{
+    "short_name":"Minhas Faltas",
+    "name": "Gerenciador de faltas",
+    "icons": [
+        {
+            "src": "/icon/icon-sm.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "/icon/icon-md.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "/icon/icon-lg.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "/icon/icon-xl.png",
+            "type": "image/png",
+            "sizes": "250x250"
+        },
+        {
+            "src": "/icon/icon-xx.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "background_color": "#343a40",
+    "description": "Site para que você possa gerenciar suas faltas!",
+    "lang": "pt-BR",
+    "start_url": "/index.html",
+    "theme_color": "white",
+    "display": "standalone",
+    "dir": "ltr",
+    "orientation": "portrait"
+}

@@ -19,11 +19,13 @@ cadastro.addEventListener('click', function() {
                     quinta: 0,
                     sexta: 0
                 })
-                window.location.href="faltas.html";
+                $('#meuModal').modal(options)
+                // window.location.href="faltas.html";
             })
             .catch(function(error){
                 console.log(error.code);
-                console.log(error.mensage);
-                alert("Falha ao se cadastrar.\nErro: "+error.code);
+                $('#meuModal').modal('show');
+                $('h5.modal-title').text('Ocorreu um erro')
+                $('div.modal-body').text(`Erro: ${error.code}`);
             })
 });

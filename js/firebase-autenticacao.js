@@ -10,12 +10,21 @@ entrar.addEventListener('click', function() {
     .signInWithEmailAndPassword(email.value, senha.value)
     .then(function (result) {
         console.log(result);
-        alert('Bem vindo, '+email.value);
-        window.location.href="faltas.html";
+        $('#meuModal').modal('show');
+        $('h5.modal-title').text('Bem vindo')
+        $('div.modal-body').text(`Bem Vindo, ${result.email}`);
+        $('#closeModal').click(function() {
+            window.location.href="faltas.html";
+        })
     })
     .catch(function(error) {
-        console.error(error.code);
-        console.error(error.message);
-        alert('Falha ao entrar!\nErro: '+error.code);
+        if(error.code !== 'auth/network-request-failed') {
+            console.error(error.code);
+            $('#meuModal').modal('show');
+            $('h5.modal-title').text('Ocorreu um erro')
+            $('div.modal-body').text(`Erro: ${error.code}`);
+        } else {
+                window.location.reload();
+            }
     })
 });

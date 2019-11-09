@@ -1,0 +1,29 @@
+.conteudo {
+    color: white!important;
+    padding-bottom: 2rem!important;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
+    border-radius: 0.25rem!important;
+    background-color: #343a40!important;
+    width: 75%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.reload {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: white;
+    border-color: #007bff;
+    transition-delay: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.reload:hover {
+    background-color: #007bff;
+}

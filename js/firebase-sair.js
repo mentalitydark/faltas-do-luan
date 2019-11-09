@@ -9,8 +9,12 @@ sair.addEventListener('click', function() {
         .auth()
         .signOut()
         .then(function() {
-            alert('Você se deslogou');
-            window.location.href="index.html";
+            $('#meuModal').modal('show');
+            $('h5.modal-title').text('Saindo')
+            $('div.modal-body').text(`Você saiu!`);
+            $('#closeModal').click(function() {
+                window.location.href="index.html";
+            })
         })
         .catch(function(error) {
             console.error(error);
