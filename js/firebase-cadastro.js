@@ -20,7 +20,7 @@ cadastro.addEventListener('click', function() {
                     sexta: 0
                 })
                 $('#meuModal').modal('show')
-                $('h5.modal-tittle').text('Cadastrado com sucesso!!');
+                $('h5.modal-title').text('Cadastrado com sucesso!!');
                 $('div.modal-body').text('Obrigado por se cadastrar! Você será redirencionado agora.');
                 $('#closeModal').click(function(){
                       window.location.href='faltas.html';
