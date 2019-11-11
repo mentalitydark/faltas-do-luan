@@ -4,7 +4,7 @@
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15)!important;
     border-radius: 0.25rem!important;
     background-color: #343a40!important;
-    width: 75%;
+    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-left: auto;
@@ -26,4 +26,23 @@
 }
 .reload:hover {
     background-color: #007bff;
+}
+@media (min-width: 1200px)
+    .conteudo {
+        max-width:1140px
+}
+
+@media (min-width: 992px)
+    .conteudo {
+        max-width:960px
+}
+
+@media (min-width: 768px)
+    .conteudo {
+        max-width:720px
+}
+
+@media (min-width: 576px)
+    .conteudo {
+        max-width:540px
 }
