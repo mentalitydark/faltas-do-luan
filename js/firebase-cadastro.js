@@ -19,7 +19,12 @@ cadastro.addEventListener('click', function() {
                     quinta: 0,
                     sexta: 0
                 })
-                $('#meuModal').modal(options)
+                $('#meuModal').modal('show')
+                $('h5.modal-tittle').text('Cadastrado com sucesso!!');
+                $('div.modal-body').text('Obrigado por se cadastrar! Você será redirencionado agora.');
+                %('#closeModal').click(function(){
+                      window.location.href='faltas.html';
+                })
                 // window.location.href="faltas.html";
             })
             .catch(function(error){
