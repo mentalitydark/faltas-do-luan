@@ -3,7 +3,8 @@ console.log('Firebase Enviar.js! OK!');
 //------------------------------------
 
 export function envia(seg, ter, qua, qui, sex) {
-    const fb = firebase.database().ref();
+    const user = firebase.auth().currentUser.uid;
+    const fb = firebase.database().ref(`/${user}`);
     let segunda = '';
     let terca = '';
     let quarta = '';
