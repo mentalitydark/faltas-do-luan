@@ -76,22 +76,23 @@ body {
 .reload:hover {
     background-color: #007bff;
 }
-@media (min-width: 1200px)
+@media (min-width: 1200px){
     .conteudo {
         max-width:1140px
+    }
 }
-
-@media (min-width: 992px)
+@media (min-width: 992px){
     .conteudo {
         max-width:960px
+    }
 }
-
-@media (min-width: 768px)
+@media (min-width: 768px){
     .conteudo {
         max-width:720px
+    }
 }
-
-@media (min-width: 576px)
+@media (min-width: 576px){
     .conteudo {
         max-width:540px
+    }
 }
